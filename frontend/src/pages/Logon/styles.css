@@ -1,0 +1,27 @@
+.logon-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto; /* vai centrlizar todos os elementos */
+
+    display: flex; /* contribui no alinhamento da web e coloca todo os componentes alinhados lado a lado 
+    flex-direction: column;  // muda para alinhamento vertical - um embaixo do outro */
+    align-items: center; /* alinha todos os itens na verticalmente ao centro */
+    justify-content: space-between; /* cria um espaço entre os elementos */
+}
+
+.logon-container section.form {
+    width: 100%;
+    max-width: 350px;
+    margin-right: 30px;
+}
+
+.logon-container section.form form {
+    margin-top: 100px;
+}
+
+.logon-container section.form form h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+

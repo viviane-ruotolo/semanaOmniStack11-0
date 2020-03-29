@@ -36,20 +36,25 @@ module.exports = {
             ong_id
         })
 
-        return response.json({id});
+        return response.json({ id });
     },
 
     async delete (request, response){
         const {id} = request.params;
         const ong_id = request.headers.authorization;
 
-        const incident = await connection('incidents').where('id', id).select('ong_id').first();
+        const incident = await connection('incidents')
+        .where('id', id)
+        .select('ong_id')
+        .first();
 
-        if (incident.ong_id != ong_id){
+        if (incident.ong_id !== ong_id){
             return response.status(401).json({ error: 'operation not permited'}); // procurar sobre HTTP status code
         }
 
-        await connection('incidents').where('id', id).delete();
+        await connection('incidents')
+        .where('id', id)
+        .delete();
 
         return response.status(204).send();
     }
