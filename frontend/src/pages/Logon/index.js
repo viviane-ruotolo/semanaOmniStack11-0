@@ -19,7 +19,7 @@ export default function Logon(){
         e.preventDefault();
 
         try{
-            const response = await api.post('sessions', {id});
+            const response = await api.post('session', {id});
 
             localStorage.setItem('ongId', id); /* fazer um armazenamento local do dado */
             localStorage.setItem('ongName', response.data.name);

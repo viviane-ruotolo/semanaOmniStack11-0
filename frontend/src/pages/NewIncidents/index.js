@@ -9,9 +9,9 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg';
 
 export default function NewIncident(){
-    const [ title, setTitle] = useState();
-    const [ description, setDescription] = useState();
-    const [ value, setValue] = useState();
+    const [ title, setTitle] = useState('');
+    const [ description, setDescription] = useState('');
+    const [ value, setValue] = useState('');
 
     const history = useHistory();
 
@@ -24,10 +24,10 @@ export default function NewIncident(){
             title,
             description,
             value,
-        }
+        };
 
         try{
-            await api.post('incidents', data = {
+            await api.post('incidents', data, {
                 headers: {
                     Authorization: ongId,
                 }
@@ -54,7 +54,7 @@ export default function NewIncident(){
                     </Link>
                 </section>
                 
-                <form>
+                <form onSubmit={handleNewIncident}>
                     <input 
                     placeholder="Título do caso" 
                     value = {title}

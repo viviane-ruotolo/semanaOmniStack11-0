@@ -18,7 +18,8 @@ iniciam com letra maiúscula
 
 * LiveReload: atualização do navegador sem precisar atualizar a página logo depois de realizar alguma alteração
 
-* Propriedades: São como atributos de tags HTML, entretando são passados para tegs de componentes dos React
+* Propriedades: São como atributos de tags HTML, entretando são passados para tegs de componentes do React
+
 
 * Estado: É uma informação que vai ser mantida pelo componente
 Toda vez que é ncessário alterar uma variável e alterar o valo dela no HTML, é utilizado o estado

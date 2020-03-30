@@ -28,12 +28,6 @@ export default function Register(){
             uf,
         }; 
 
-        console.log( name,
-            email,
-            whatsapp,
-            city,
-            uf,);
-
         try{
             const response = await api.post('ongs', data); /* salvar dados no BD*/
         

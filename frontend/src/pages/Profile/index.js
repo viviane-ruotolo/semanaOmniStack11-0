@@ -13,7 +13,7 @@ export default function Profile(){
     const [incidents, setIncidents] = useState([]);
     
   /*  useEffect - recebe uma função com dois parâmetros [função pra renderizar o dado, 
-    dado que quando modificado incializa a função] */
+    dado  em um array que quando modificado incializa a função] */
     
     useEffect( () => {
         api.get('profile', {
@@ -83,11 +83,6 @@ export default function Profile(){
                 </li>
                 ))}
 
-
-
-
-               
-                
             </ul>
         </div>
     )
